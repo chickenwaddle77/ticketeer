@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticketeer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="\" id="navbar__logo">TICKETEER</a> <!-- you can also use a#navbar__logo
-            for same effect -->
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span> <!-- span.bar-->
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div> <!-- you can also type 
-            .navbar__toggle#mobile-menu this is to ensure the menu is responsive-->
-            <ul class="navbar__menu">
-                <li class="navbar_item">
-                    <a href="\" class="navbar__links">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="\" class="navbar__links">
-                        Support
-                    </a>
-                </li>
-                <li class="navbar_btn">
-                    <a href="\" class="button">
-                        My Trips
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</body>
+    <main>
+        <div class="form_container">
+            <div class="form_border">
+                <form class="login_form_field">
+                    <div class="header">Login</div>
+                    
+                    <p class="form_input" for="username">Username</p>
+                    <input type="text" class="login-form-field" name="username" id="username">
 
+                    <p class="form_input" for="password">Password</p>
+                    <input type="password" class="login-form-field" name="password" id="password">
+
+                    <input type="submit" class="login-form-btn" id="submit">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
