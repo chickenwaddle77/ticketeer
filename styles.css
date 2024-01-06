@@ -51,10 +51,14 @@
     width: 240px;
     cursor: text;
     caret-color: gray;
+
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .form_container .login-form-btn {
-    width: 30%;
+    width: 240px;
+    height: 2.5rem;
     justify-self: center;
     font-weight: 500;
     font-size: 1rem;
@@ -66,7 +70,15 @@
     cursor: pointer;
 }
 
+
 .form_container .login-form-btn:hover {
     background-color: black;
     color: white;
+}
+
+.sign-up-tag {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 1rem;
+
 }
