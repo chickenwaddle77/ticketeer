@@ -1,165 +1,99 @@
-/* the asterisk means that the styling applies to all elements in the webpage
-justify-content — controls alignment of all items on the x axis. 
-align-items — controls alignment of all items on the y axis. 
-An element with position: sticky; is positioned based on the user's scroll position.
-
-A sticky element toggles between relative and fixed, depending on the scroll position. 
-It is positioned relative until a given offset position is met in the viewport 
-- then it "sticks" in place (like position:fixed).
-
-z-index is the CSS property that controls the stacking order of overlapping elements on a page. 
-An element with a higher z-index value will appear in front of an element with a lower z-index value. 
-The property is called “z-index” because it sets the order of elements along the z-axis.
-
-
-*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color:black;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.navbar {
-    background: #87f5c9;
-    height: 80px;
+.main {
+    height: 50%;
+    width: 70%;
+}
+
+.header {
+    position: relative;
+    font-size: 1.8rem;
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+
+.form-class {
+    display: grid;
+}
+
+.form_border {
+    padding: 4rem 5rem;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.form_container {
+    padding: 2rem;
     display: flex;
+    height: 70%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999; /* top of everything */
-}
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto; /* top and bottom is first digit */
-    padding: 0 4rem;
-    z-index: 1;
-    position: relative;
-}
-
-#navbar__logo { 
-    color: #212322;
-    font-style: italic;
-    font-weight:bold;
-    text-decoration: none;
-    font-size: 2.5rem;
     position: absolute;
-    height: auto;
+}
+
+.form_input {
+    font: .5rem;
+    font-weight: lighter;
+}
+
+.form_container .login-form-field{
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 300px;
+    cursor: text;
+    caret-color: gray;
+
+    font-weight: 500;
+}
+
+.form_container .login-form-btn {
+    width: 240px;
+    height: 2.5rem;
+    justify-self: center;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .25rem;
     margin-top: 1rem;
-    display: flex;
-    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
     cursor: pointer;
 }
 
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
+
+.form_container .login-form-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.sign-up-tag {
+    font-size: .8rem;
     text-align: center;
+    margin-top: 1rem;
+
 }
 
-.navbar_item {
-    height: 80px;
-}
-
-.navbar__links {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    height: 100%;
-}
-
-.navbar_btn {
-    margin: 0 1rem;
-}
-
-.button {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    background: #f8a879;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.button:hover {
-    background: #87a6f5;
-    transition: all 0.3s ease;
-    color: rgb(0, 0, 0);
-}
-
-.navbar__links:hover {
-    color: #87a6f5;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 760px) {
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-        z-index: 1;
-    }
-
-    .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        position: absolute;
-        width: 100%;
-        transition: all 0.5s ease;
-        height: 50%;
-        z-index: -1;
-    }
-
-    .navbar__menu:active  {
-        background: black;
-        top: 100%;
-        opacity: 1;
-        z-index: 100;
-        height: 50%;
-        transition: all 0.5s ease;
-    }
-    #navbar__logo {
-        margin: 25px;
-    }
-
-    .navbar__toggle .bar { 
-        width: 25%;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease;
-        background: #212322;
-    }
-
-    .navbar_item {
-        width: 100%;
-    }
-
-    .navbar__links {
-        text-align: center;
-        width: 100%;
-        display: table;
-    }
-
-    #mobile-menu { 
-        position: ;
-    }
+.incorrect-signin {
+    display: none;
+    
+    border: 1px solid black;
+    background: rgb(233, 164, 177);
+    border-radius: 2px;
+    margin-top: 2rem;
+    padding: 1rem;
+    justify-self: center;
+    inline-size: 300px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: .8rem;
+    font-weight: 400;
 }
